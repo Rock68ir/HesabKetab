@@ -1,0 +1,31 @@
+
+.root {
+    -fx-background-color: #b3b4bd;
+}
+#LoginGrid {
+    -fx-background-radius: 10;
+    -fx-border-radius: 15;
+    -fx-background-color: White;
+}
+#mfxLoginBtn {
+    -fx-background-radius: 18 18 18 18;
+    -fx-border-radius: 30 30 30 30;
+    -fx-background-color: #141619   ;
+    -fx-text-fill: #fff;
+}
+#mfxLoginBtn {
+    -fx-font-smoothing-type: gray;
+}
+#mfxLoginBtn .mfx-ripple-generator {
+    -mfx-ripple-radius: 40;
+    -mfx-auto-clip: true;
+}
+.mfx-text-field {
+    -fx-min-width: 130;
+    -fx-font-family: 'Tahoma';
+    -fx-background-color: transparent;
+}
+.mfx-text-field .floating-text {
+    -fx-background-color: #fff;
+    -fx-font-family: 'Tahoma';
+}
