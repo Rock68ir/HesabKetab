@@ -1,4 +1,4 @@
-package Status;
+package org.example.hesabketab.Status;
 
 public enum STATUS {
     ACTIVE(1 , "همکاری"),

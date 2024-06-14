@@ -1,7 +1,7 @@
-package Employee;
+package org.example.hesabketab.Employee;
 
-import FileHandler.ISearchAndStatics;
-import Salaries.Salary;
+import org.example.hesabketab.FileHandler.ISearchAndStatics;
+import org.example.hesabketab.Salaries.Salary;
 import Status.GENDER;
 import Status.STATUS;
 
@@ -47,14 +47,14 @@ public class EmployeeSearch implements ISearchAndStatics {
         return result;
     }
     @Override
-    public ArrayList<Employee> FindBySalary(short Type) throws Exception {
+    public ArrayList<Salary> FindBySalary(short Type) throws Exception {
         ArrayList<Salary> list = new ArrayList<>();
 
         for (Employee employee: employees
         ) {
-            for (Salary salary: employee.getSalaries()
+            for (Salary salary : employee.getSalaries()
                  ) {
-                if(salary.getType() == ID){
+                if(salary.getType() == Type){
                     list.add(salary);
                 }
             }
@@ -63,13 +63,14 @@ public class EmployeeSearch implements ISearchAndStatics {
     }
 
     @Override
-    public ArrayList<GENDER> FindByGender(int ID) throws Exception {
+    public ArrayList<Employee> FindByGender(int ID) throws Exception {
         for (Employee employee: employees
         ) {
-            if(employee.getStatus() ==)){
+            if(employee.getStatus() == STATUS.ACTIVE){
                 result.add(employee);
             }
         }
+        return result;
     }
 
     @Override

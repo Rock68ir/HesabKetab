@@ -1,4 +1,4 @@
-package Status;
+package org.example.hesabketab.Status;
 
 public enum GENDER {
     MALE(1 , "مدکز"),

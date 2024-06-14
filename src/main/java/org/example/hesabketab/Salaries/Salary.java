@@ -1,4 +1,4 @@
-package Salaries;
+package org.example.hesabketab.Salaries;
 import Status.STATUS;
 
 import java.util.Date;

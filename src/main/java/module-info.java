@@ -12,6 +12,7 @@ module org.example.hesabketab {
     requires com.almasb.fxgl.all;
     requires MaterialFX;
     requires fr.brouillard.oss.cssfx;
+    requires java.management;
 
     opens org.example.hesabketab to javafx.fxml;
     exports org.example.hesabketab;

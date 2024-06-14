@@ -1,6 +1,6 @@
-package Employee;
+package org.example.hesabketab.Employee;
 
-import Salaries.Salary;
+import org.example.hesabketab.Salaries.Salary;
 import Status.STATUS;
 
 import java.io.Serializable;
@@ -14,7 +14,7 @@ public class Employee implements Serializable {
     private String codeID;
     private Date birthDate;
     private ArrayList<Salary> Salaries;
-    private boolean isManeger;
+    private boolean isManager;
     private STATUS status;
 
     public int getID() {
@@ -65,12 +65,12 @@ public class Employee implements Serializable {
         Salaries = salaries;
     }
 
-    public boolean isManeger() {
-        return isManeger;
+    public boolean isManager() {
+        return isManager;
     }
 
-    public void setManeger(boolean maneger) {
-        isManeger = maneger;
+    public void setManager(boolean manager) {
+        isManager = manager;
     }
 
     public STATUS getStatus() {
@@ -81,14 +81,14 @@ public class Employee implements Serializable {
         this.status = status;
     }
 
-    public Employee(int ID, String firstName, String lastName, String codeID, Date birthDate, ArrayList<Salary> salaries, boolean isManeger, STATUS status) {
+    public Employee(int ID, String firstName, String lastName, String codeID, Date birthDate, ArrayList<Salary> salaries, boolean isManager, STATUS status) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.codeID = codeID;
         this.birthDate = birthDate;
         Salaries = salaries;
-        this.isManeger = isManeger;
+        this.isManager = isManager;
         this.status = status;
     }
 
