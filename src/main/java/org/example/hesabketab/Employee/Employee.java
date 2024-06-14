@@ -1,21 +1,23 @@
 package org.example.hesabketab.Employee;
 
 import org.example.hesabketab.Salaries.Salary;
+import org.example.hesabketab.Status.GENDER;
 import org.example.hesabketab.Status.STATUS;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Employee implements Serializable {
     private int ID;
     private String firstName;
     private String lastName;
     private String codeID;
-    private Date birthDate;
+    private LocalDate birthDate;
     private ArrayList<Salary> Salaries;
     private boolean isManager;
     private STATUS status;
+    private GENDER gender;
 
     public int getID() {
         return ID;
@@ -49,11 +51,11 @@ public class Employee implements Serializable {
         this.codeID = codeID;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -81,7 +83,15 @@ public class Employee implements Serializable {
         this.status = status;
     }
 
-    public Employee(int ID, String firstName, String lastName, String codeID, Date birthDate, ArrayList<Salary> salaries, boolean isManager, STATUS status) {
+    public GENDER getGender() {
+        return gender;
+    }
+
+    public void setGender(GENDER gender) {
+        this.gender = gender;
+    }
+
+    public Employee(int ID, String firstName, String lastName, String codeID, LocalDate birthDate, ArrayList<Salary> salaries, boolean isManager, STATUS status , GENDER gender) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -90,6 +100,7 @@ public class Employee implements Serializable {
         Salaries = salaries;
         this.isManager = isManager;
         this.status = status;
+        this.gender = gender;
     }
 
 }

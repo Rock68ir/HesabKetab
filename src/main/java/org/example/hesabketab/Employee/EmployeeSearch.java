@@ -5,6 +5,7 @@ import org.example.hesabketab.Salaries.Salary;
 import org.example.hesabketab.Status.GENDER;
 import org.example.hesabketab.Status.STATUS;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -36,11 +37,11 @@ public class EmployeeSearch implements ISearchAndStatics {
         return result;
     }
     @Override
-    public ArrayList<Employee> FindByDate(Date start, Date end) throws Exception {
+    public ArrayList<Employee> FindByDate(LocalDate start, LocalDate end) throws Exception {
 
         for (Employee employee: employees
         ) {
-            if(employee.getBirthDate().before(end) && employee.getBirthDate().after(start)){
+            if(employee.getBirthDate().isBefore(end) && employee.getBirthDate().isAfter(start)){
                 result.add(employee);
             }
         }

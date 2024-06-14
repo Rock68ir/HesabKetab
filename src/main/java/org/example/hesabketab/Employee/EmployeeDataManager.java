@@ -24,7 +24,7 @@ public class EmployeeDataManager implements IFileHandler {
             }
         }
         catch (IOException ioException){
-            throw ioException;
+            System.out.println("File Not Found!");
         }
         finally{
             writer.close();

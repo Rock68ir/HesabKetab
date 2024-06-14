@@ -2,12 +2,13 @@ package org.example.hesabketab.Salaries;
 
 import org.example.hesabketab.Status.STATUS;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class PerHourSalary extends Salary{
     private int perHour;
 
-    public PerHourSalary(Date start, Date end, int managerBase, STATUS status, short type, int base , int perHour) {
+    public PerHourSalary(LocalDate start, LocalDate end, int managerBase, STATUS status, short type, int base , int perHour) {
         super(start, end, managerBase, status, type, base);
         this.perHour = perHour;
     }

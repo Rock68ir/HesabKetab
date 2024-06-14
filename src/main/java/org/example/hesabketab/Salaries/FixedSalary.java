@@ -2,11 +2,11 @@ package org.example.hesabketab.Salaries;
 
 import org.example.hesabketab.Status.STATUS;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class FixedSalary extends Salary{
 
-    public FixedSalary(Date start, Date end, int managerBase, STATUS status, short type, int base) {
+    public FixedSalary(LocalDate start, LocalDate end, int managerBase, STATUS status, short type, int base) {
         super(start, end, managerBase, status, type, base);
     }
 
