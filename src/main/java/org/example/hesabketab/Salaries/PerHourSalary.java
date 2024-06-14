@@ -1,6 +1,6 @@
 package org.example.hesabketab.Salaries;
 
-import Status.STATUS;
+import org.example.hesabketab.Status.STATUS;
 
 import java.util.Date;
 

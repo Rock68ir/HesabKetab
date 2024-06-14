@@ -1,7 +1,7 @@
 package org.example.hesabketab.Employee;
 
 import org.example.hesabketab.Salaries.Salary;
-import Status.STATUS;
+import org.example.hesabketab.Status.STATUS;
 
 import java.io.Serializable;
 import java.util.ArrayList;

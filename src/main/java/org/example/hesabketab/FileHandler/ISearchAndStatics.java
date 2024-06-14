@@ -2,8 +2,8 @@ package org.example.hesabketab.FileHandler;
 
 import org.example.hesabketab.Employee.Employee;
 import org.example.hesabketab.Salaries.Salary;
-import Status.GENDER;
-import Status.STATUS;
+import org.example.hesabketab.Status.GENDER;
+import org.example.hesabketab.Status.STATUS;
 import org.example.hesabketab.Salaries.Salary;
 
 import java.util.ArrayList;
