@@ -47,6 +47,6 @@ public class DashboardController {
 
 
     public void ManageEmployeeClicked(ActionEvent actionEvent) throws IOException {
-        ((BorderPane)dashboardMenu.getParent()).setCenter(FXMLLoader.load(Objects.requireNonNull(DashboardController.class.getResource("SubmitUser.fxml"))));
+        ((BorderPane)dashboardMenu.getParent()).setCenter(FXMLLoader.load(Objects.requireNonNull(DashboardController.class.getResource("ManageEmployee.fxml"))));
     }
 }
