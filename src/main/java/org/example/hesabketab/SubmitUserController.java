@@ -58,7 +58,7 @@ public class SubmitUserController {
         }
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(DashboardController.class.getResource(address)));
         ((BorderPane)NextSubmitBtn.getParent().getParent().getParent()).setCenter(loader.load());
-        FixedSalarySubmitController controller = loader.getController();
+        SubmitSalaryBaseController controller = loader.getController();
         controller.initData(employeeFirstField.getText() , employeeLastField.getText() , employeeNationalIDField.getText() , employeeDateField.getValue() , GENDER.valueOf(GenderComboBox.getValue().toUpperCase()));
     }
 }

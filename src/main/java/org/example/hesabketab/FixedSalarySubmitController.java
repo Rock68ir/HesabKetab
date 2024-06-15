@@ -7,30 +7,9 @@ import org.example.hesabketab.Status.GENDER;
 
 import java.time.LocalDate;
 
-public class FixedSalarySubmitController {
-    public MFXCheckbox ManagerCheckBox;
-    public MFXComboBox<String> DepartmentManagerComboBox;
-    String empName;
-    String emplast;
-    String id;
-    LocalDate bd;
-    GENDER gender;
-
-    public void initialize() {
-    }
-    void initData(String firstName, String lastName, String codeID, LocalDate birthDate , GENDER gender) {
-        this.empName = firstName;
-        this.emplast = lastName;
-        this.id = codeID;
-        this.bd = birthDate;
-        this.gender = gender;
-    }
+public class FixedSalarySubmitController extends SubmitSalaryBaseController{
+    @Override
     public void NextSubmitBtnClicked(ActionEvent actionEvent) {
-        System.out.printf("%s%n%s%n%d" , empName , emplast , bd.getDayOfMonth());
-    }
-
-    public void ManagerChecked(ActionEvent actionEvent) {
-        DepartmentManagerComboBox.setDisable(!DepartmentManagerComboBox.isDisable());
-        DepartmentManagerComboBox.setVisible(!DepartmentManagerComboBox.isVisible());
+        System.out.printf("%s%n%s%n%d%nFixed" , empName , emplast , bd.getDayOfMonth());
     }
 }
