@@ -14,7 +14,4 @@ public class FixedSalary extends Salary{
     public int CalcuteIncome(){
         return super.base;
     }
-    public int CalcuteIncomePerMonth(){
-        return CalcuteIncome() * 30;
-    }
 }
