@@ -39,12 +39,12 @@
          <Insets top="10.0"/>
       </VBox.margin>
       <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="300.0">
-         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Percentage" floatingTextGap="10.0"
+         <MFXTextField fx:id="PercentageTextField" borderGap="5.0" floatMode="BORDER" floatingText="Percentage" floatingTextGap="10.0"
                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
                        prefHeight="35.0" prefWidth="234.0"/>
       </HBox>
       <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="389.0">
-         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Sold Amount" floatingTextGap="10.0"
+         <MFXTextField fx:id="SoldAmountTextField" borderGap="5.0" floatMode="BORDER" floatingText="Sold Amount" floatingTextGap="10.0"
                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
                        prefHeight="35.0" prefWidth="234.0"/>
       </HBox>
@@ -55,7 +55,7 @@
       </opaqueInsets>
       <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="300.0"/>
       <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="389.0">
-         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Base Salary" floatingTextGap="10.0"
+         <MFXTextField fx:id="BaseTextField" borderGap="5.0" floatMode="BORDER" floatingText="Base Salary" floatingTextGap="10.0"
                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
                        prefHeight="35.0" prefWidth="234.0"/>
       </HBox>

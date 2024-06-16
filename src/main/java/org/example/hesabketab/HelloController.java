@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.example.hesabketab.Employee.Employee;
 import org.example.hesabketab.Employee.EmployeeDataManager;
 
 import java.util.Objects;
