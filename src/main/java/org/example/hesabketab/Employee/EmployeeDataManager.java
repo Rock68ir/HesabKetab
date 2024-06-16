@@ -8,9 +8,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class EmployeeDataManager implements IFileHandler {
-    private ArrayList<Employee> list;
-    private ObjectInputStream reader;
+    public static ArrayList<Employee> list;
     private ObjectOutputStream writer;
+
     @Override
     public void UpdateFile(ArrayList<?> list, String fileAddress) throws Exception {
 
@@ -18,9 +18,14 @@ public class EmployeeDataManager implements IFileHandler {
         try {
             File file = new File(fileAddress);
             file.delete();
-            file.createNewFile();
+            if(file.createNewFile())
+                System.out.printf("Created! + %s" , file.getAbsolutePath());
+            writer =new ObjectOutputStream(Files.newOutputStream(Paths.get(fileAddress)));
+            if(list != null)
+            {
             for (Object object: list) {
                 writer.writeObject(object);
+            }
             }
         }
         catch (IOException ioException){
@@ -31,25 +36,19 @@ public class EmployeeDataManager implements IFileHandler {
         }
     }
     @Override
-    public ArrayList<?> ReadFile(String fileAddress) throws Exception{
+    public ArrayList<Employee> ReadFile(String fileAddress) throws Exception{
        list = new ArrayList<>();
+        try {
+            ObjectInputStream reader = new ObjectInputStream(Files.newInputStream(Paths.get(fileAddress)));
+            while (true) {
+                Employee employee = (Employee) reader.readObject();
+                list.add(employee);
+            }
+        } catch (EOFException ignored) {
 
-        reader = new ObjectInputStream(Files.newInputStream(Paths.get(fileAddress)));
-       try {
-           while (true){
-              Employee employee = (Employee)reader.readObject();
-              list.add(employee);
-           }
-       }
-       catch (EOFException e){
-
-       }
-       catch (Exception exception){
-           throw exception;
-       }
-       finally {
-           reader.close();
-       }
+        } catch (Exception exception) {
+            System.out.println("File to read not found !");
+        }
         return list;
     }
 }

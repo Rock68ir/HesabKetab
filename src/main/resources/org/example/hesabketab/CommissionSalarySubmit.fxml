@@ -10,79 +10,65 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
-      prefWidth="700.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" stylesheets="@sidebarstyle.css"
-      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.example.hesabketab.CommissionSalarySubmitController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" stylesheets="@sidebarstyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hesabketab.CommissionSalarySubmitController">
    <padding>
-      <Insets bottom="35.0" left="35.0" right="35.0" top="35.0"/>
+      <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
    </padding>
    <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="43.0" prefWidth="550.0">
       <Label text="Employee Commission Salary Information">
          <font>
-            <Font name="Tahoma Bold" size="19.0"/>
+            <Font name="Tahoma Bold" size="19.0" />
          </font>
       </Label>
    </HBox>
    <HBox prefHeight="24.0" prefWidth="550.0">
       <Label text="Payment Information">
          <font>
-            <Font name="Arial Black" size="14.0"/>
+            <Font name="Arial Black" size="14.0" />
          </font>
       </Label>
    </HBox>
    <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="600.0">
       <opaqueInsets>
-         <Insets right="30.0"/>
+         <Insets right="30.0" />
       </opaqueInsets>
       <VBox.margin>
-         <Insets top="10.0"/>
+         <Insets top="10.0" />
       </VBox.margin>
       <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="300.0">
-         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Percentage" floatingTextGap="10.0"
-                       maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-                       prefHeight="35.0" prefWidth="234.0"/>
+         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Percentage" floatingTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="234.0" />
       </HBox>
       <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="389.0">
-         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Sold Amount" floatingTextGap="10.0"
-                       maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-                       prefHeight="35.0" prefWidth="234.0"/>
+         <MFXTextField borderGap="5.0" floatMode="BORDER" floatingText="Sold Amount" floatingTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="234.0" />
       </HBox>
    </HBox>
    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="600.0">
       <opaqueInsets>
-         <Insets right="30.0"/>
+         <Insets right="30.0" />
       </opaqueInsets>
       <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="322.0">
-         <MFXCheckbox fx:id="ManagerCheckBox" onAction="#ManagerChecked" prefHeight="42.0" prefWidth="139.0"
-                      text="Manager"/>
+         <MFXCheckbox fx:id="ManagerCheckBox" onAction="#ManagerChecked" prefHeight="42.0" prefWidth="139.0" text="Manager" />
       </HBox>
       <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="300.0">
-         <MFXComboBox fx:id="DepartmentManagerComboBox" alignment="CENTER_RIGHT" disable="true" floatMode="BORDER"
-                      floatingText="Department" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
-                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="238.0" selectable="true"
-                      visible="false"/>
+         <MFXComboBox fx:id="DepartmentManagerComboBox" alignment="CENTER_RIGHT" disable="true" floatMode="BORDER" floatingText="Department" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="238.0" selectable="true" visible="false" />
          <HBox.margin>
-            <Insets left="40.0"/>
+            <Insets left="40.0" />
          </HBox.margin>
          <padding>
-            <Insets left="10.0"/>
+            <Insets left="10.0" />
          </padding>
       </HBox>
    </HBox>
    <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="600.0">
       <opaqueInsets>
-         <Insets right="30.0"/>
+         <Insets right="30.0" />
       </opaqueInsets>
       <VBox.margin>
-         <Insets top="60.0"/>
+         <Insets top="60.0" />
       </VBox.margin>
-      <MFXButton fx:id="NextSubmitBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL3"
-                 maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
-                 onAction="#NextSubmitBtnClicked" prefHeight="42.0" prefWidth="200.0" rippleAnimateShadow="true"
-                 rippleColor="#3d52a0" text="Next" textAlignment="CENTER">
+      <MFXButton fx:id="NextSubmitBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL3" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#NextSubmitBtnClicked" prefHeight="42.0" prefWidth="200.0" rippleAnimateShadow="true" rippleColor="#3d52a0" text="Next" textAlignment="CENTER">
          <font>
-            <Font name="Arial Black" size="14.0"/>
+            <Font name="Arial Black" size="14.0" />
          </font>
       </MFXButton>
    </HBox>

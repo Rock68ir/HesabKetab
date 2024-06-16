@@ -9,6 +9,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.example.hesabketab.Employee.Employee;
+import org.example.hesabketab.Employee.EmployeeDataManager;
 
 import java.io.IOException;
 import java.time.LocalDateTime;

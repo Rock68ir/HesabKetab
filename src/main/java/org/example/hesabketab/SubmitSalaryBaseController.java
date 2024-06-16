@@ -28,5 +28,5 @@ public abstract class SubmitSalaryBaseController {
         DepartmentManagerComboBox.setDisable(!DepartmentManagerComboBox.isDisable());
         DepartmentManagerComboBox.setVisible(!DepartmentManagerComboBox.isVisible());
     }
-    public abstract void NextSubmitBtnClicked(ActionEvent actionEvent);
+    public abstract void NextSubmitBtnClicked(ActionEvent actionEvent) throws Exception;
 }

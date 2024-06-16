@@ -1,9 +1,10 @@
 package org.example.hesabketab.Salaries;
 import org.example.hesabketab.Status.STATUS;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Salary {
+public abstract class Salary implements Serializable {
     public Salary(LocalDate start, LocalDate end, int managerBase, STATUS status, short type, int base) {
         this.start = start;
         this.end = end;
