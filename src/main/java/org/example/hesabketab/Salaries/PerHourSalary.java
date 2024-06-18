@@ -15,7 +15,7 @@ public class PerHourSalary extends Salary{
     }
 
     @Override
-    protected int CalcuteIncome() {
+    public int CalcuteIncome() {
         return workingHours*perHour;
     }
 }

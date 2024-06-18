@@ -12,7 +12,7 @@ public class CommissionSalary extends Salary{
         this.percentage = percentage;
     }
     @Override
-    protected int CalcuteIncome() {
-        return (int) (base * percentage);
+    public int CalcuteIncome() {
+        return (int) (base * percentage /100);
     }
 }

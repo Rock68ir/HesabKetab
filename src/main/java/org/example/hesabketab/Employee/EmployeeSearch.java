@@ -26,6 +26,18 @@ public class EmployeeSearch implements ISearchAndStatics {
         }
         return result;
     }
+
+    @Override
+    public ArrayList<Employee> FindByID(String ID) throws Exception {
+        for (Employee employee: employees
+        ) {
+            if(employee.getCodeID().equals(ID)){
+                result.add(employee);
+            }
+        }
+        return result;
+    }
+
     @Override
     public ArrayList<Employee> FindByLastName(String lastName) throws Exception {
         for (Employee employee: employees

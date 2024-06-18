@@ -28,19 +28,21 @@
          </font>
       </Label>
    </HBox>
-   <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="600.0">
+   <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="600.0">
       <opaqueInsets>
          <Insets right="30.0" />
       </opaqueInsets>
-      <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="300.0">
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="365.0">
+         <children>
+            <MFXTextField fx:id="employeeFirstField" borderGap="5.0" floatMode="BORDER" floatingText="Firstname" floatingTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="234.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="242.0">
          <MFXTextField fx:id="employeeLastField" borderGap="5.0" floatMode="BORDER" floatingText="Lastname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="234.0" HBox.hgrow="ALWAYS">
             <HBox.margin>
                <Insets />
             </HBox.margin>
          </MFXTextField>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="333.0">
-         <MFXTextField fx:id="employeeFirstField" borderGap="5.0" floatMode="BORDER" floatingText="Firstname" floatingTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="234.0" />
       </HBox>
    </HBox>
    <HBox prefHeight="24.0" prefWidth="550.0">

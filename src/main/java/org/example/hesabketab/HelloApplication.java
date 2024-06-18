@@ -30,7 +30,9 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("HesabKetab");
         stage.setScene(scene);
-        stage.setResizable(false);
+//        stage.setResizable(false);
+        stage.setMinHeight(700);
+        stage.setMinWidth(1000);
         stage.show();
     }
 

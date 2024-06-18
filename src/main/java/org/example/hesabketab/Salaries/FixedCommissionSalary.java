@@ -15,7 +15,7 @@ public class FixedCommissionSalary extends CommissionSalary{
 
 
     @Override
-    protected int CalcuteIncome() {
+    public int CalcuteIncome() {
         return super.CalcuteIncome() + fixedAmount;
     }
     public int PerMonth(){

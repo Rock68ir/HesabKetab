@@ -22,7 +22,7 @@
   -fx-border-radius: 30 30 30 30;
 }
 #NextSubmitBtn {
-  -fx-background-radius: 18 18 18 18;
+  -fx-background-radius: 10;
   -fx-border-radius: 30 30 30 30;
   -fx-background-color: #141619   ;
   -fx-text-fill: #fff;

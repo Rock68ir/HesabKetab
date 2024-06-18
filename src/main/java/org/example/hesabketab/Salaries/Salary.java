@@ -28,5 +28,5 @@ public abstract class Salary implements Serializable {
     protected STATUS status;
     private short type;
     protected int base;
-    protected abstract int CalcuteIncome();
+    public abstract int CalcuteIncome();
 }
