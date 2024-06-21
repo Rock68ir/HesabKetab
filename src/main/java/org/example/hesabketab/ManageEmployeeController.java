@@ -72,15 +72,16 @@ public class ManageEmployeeController{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UserPopupPage.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             UserPopupPageController controller = fxmlLoader.getController();
-            controller.initData(paginated.getSelectionModel().getSelectedValue().getFirstName() , paginated.getSelectionModel().getSelectedValue().getLastName() , paginated.getSelectionModel().getSelectedValue().getCodeID() , paginated.getSelectionModel().getSelectedValue().getBirthDate() , paginated.getSelectionModel().getSelectedValue().getGender());
+            controller.initData(paginated.getSelectionModel().getSelectedValue().getFirstName() , paginated.getSelectionModel().getSelectedValue().getLastName()
+                    , paginated.getSelectionModel().getSelectedValue().getCodeID() , paginated.getSelectionModel().getSelectedValue().getBirthDate()
+                    , paginated.getSelectionModel().getSelectedValue().getGender(), paginated.getSelectionModel().getSelectedValue().getSalaries());
 
             Stage stage = new Stage();
-            stage.setTitle(paginated.getSelectionModel().getSelectedValue().getFirstName());
+            stage.setTitle(paginated.getSelectionModel().getSelectedValue().getFirstName() + paginated.getSelectionModel().getSelectedValue().getLastName());
             stage.setScene(scene);
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.initModality(Modality.APPLICATION_MODAL);
 //        stage.setResizable(false);
-            stage.setMinHeight(700);
-            stage.setMinWidth(1000);
             stage.show();
             System.out.println("Dd");
             System.out.println("You clicked on " + paginated.getSelectionModel().getSelectedValue().getSalaries().getFirst().CalcuteIncome());
