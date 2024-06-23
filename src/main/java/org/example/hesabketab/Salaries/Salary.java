@@ -29,4 +29,9 @@ public abstract class Salary implements Serializable {
     private short type;
     protected int base;
     public abstract int CalcuteIncome();
+    @Override
+    public String toString(){
+        String[] str = this.getClass().getName().split("\\.");
+        return str[str.length-1];
+    }
 }

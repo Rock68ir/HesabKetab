@@ -25,6 +25,7 @@ public class DashboardController {
     public Button SubmitUserMenu;
     public Button NextSubmitBtn;
     public Button ManageEmployeeSideBtn;
+    public Button AddDepartmentSideBtn;
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
@@ -50,5 +51,9 @@ public class DashboardController {
 
     public void ManageEmployeeClicked(ActionEvent actionEvent) throws IOException {
         ((BorderPane)dashboardMenu.getParent()).setCenter(FXMLLoader.load(Objects.requireNonNull(DashboardController.class.getResource("ManageEmployee.fxml"))));
+    }
+
+    public void AddDepartmentClicked(ActionEvent actionEvent) throws IOException {
+        ((BorderPane)dashboardMenu.getParent()).setCenter(FXMLLoader.load(Objects.requireNonNull(DashboardController.class.getResource("SubmitDepartment.fxml"))));
     }
 }

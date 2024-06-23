@@ -21,7 +21,8 @@ public class CommissionSalarySubmitController extends SubmitSalaryBaseController
 
     @Override
     public void NextSubmitBtnClicked(ActionEvent actionEvent) throws Exception {
-        CommissionSalary newCommissionSalary = new CommissionSalary(LocalDate.now() , LocalDate.now().minusMonths(1), 0 , STATUS.ACTIVE , (short) 3, Integer.parseInt(SoldAmountTextField.getText()), Integer.parseInt(PercentageTextField.getText()) );
+        super.NextSubmitBtnClicked(actionEvent);
+        CommissionSalary newCommissionSalary = new CommissionSalary(StartContractDateField.getValue(), LocalDate.now().plusMonths(Integer.parseInt(ContractPeriodField.getText())), managerBase , STATUS.ACTIVE , (short) 3, Integer.parseInt(SoldAmountTextField.getText()), Integer.parseInt(PercentageTextField.getText()) );
         SubmitInFile(newCommissionSalary);
     }
 }

@@ -18,5 +18,5 @@ public interface ISearchAndStatics {
      ArrayList<Salary> FindBySalary(short Type) throws Exception;
     ArrayList<Employee> FindByGender(int ID) throws Exception;
     ArrayList<STATUS> FindByStatus(int ID) throws Exception;
-
+    ArrayList<Employee> FindByManager(boolean condition);
 }

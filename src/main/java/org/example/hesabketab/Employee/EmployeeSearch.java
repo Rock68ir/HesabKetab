@@ -10,12 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EmployeeSearch implements ISearchAndStatics {
-    ArrayList<Employee> employees;
-    ArrayList<Employee> result;
-    public EmployeeSearch(ArrayList<Employee> employees) {
-        this.employees = employees;
-        result = new ArrayList<>();
-    }
+    ArrayList<Employee> employees = EmployeeDataManager.list;
+    ArrayList<Employee> result = new ArrayList<>();
     @Override
     public ArrayList<Employee> FindByName(String name) throws Exception {
         for (Employee employee: employees
@@ -89,5 +85,16 @@ public class EmployeeSearch implements ISearchAndStatics {
     @Override
     public ArrayList<STATUS> FindByStatus(int ID) throws Exception {
         return null;
+    }
+    @Override
+    public ArrayList<Employee> FindByManager(boolean condition) {
+
+        for (Employee employee: employees
+        ) {
+            if(employee.isManager() == condition){
+                result.add(employee);
+            }
+        }
+        return result;
     }
 }

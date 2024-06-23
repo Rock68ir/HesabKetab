@@ -16,4 +16,7 @@ module org.example.hesabketab {
 
     opens org.example.hesabketab to javafx.fxml;
     exports org.example.hesabketab;
+    exports org.example.hesabketab.Employee;
+    exports org.example.hesabketab.Department;
+    opens org.example.hesabketab.Department to javafx.fxml;
 }

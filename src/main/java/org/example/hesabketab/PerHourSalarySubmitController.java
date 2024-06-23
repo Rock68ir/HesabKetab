@@ -20,7 +20,8 @@ public class PerHourSalarySubmitController extends SubmitSalaryBaseController{
 
     @Override
     public void NextSubmitBtnClicked(ActionEvent actionEvent) throws Exception {
-        PerHourSalary newPerHourSalary = new PerHourSalary(LocalDate.now() , LocalDate.now().minusMonths(1), 0 , STATUS.ACTIVE , (short) 2, 0, Integer.parseInt(PerHourTextField.getText()) , Integer.parseInt(WorkedHourTextField.getText()));
+        super.NextSubmitBtnClicked(actionEvent);
+        PerHourSalary newPerHourSalary = new PerHourSalary(StartContractDateField.getValue(), LocalDate.now().plusMonths(Integer.parseInt(ContractPeriodField.getText())), managerBase , STATUS.ACTIVE , (short) 2, 0, Integer.parseInt(PerHourTextField.getText()) , Integer.parseInt(WorkedHourTextField.getText()));
         SubmitInFile(newPerHourSalary);
     }
 }

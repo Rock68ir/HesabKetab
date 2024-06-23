@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.example.hesabketab.Department.DepartmentDataManager;
 import org.example.hesabketab.Employee.EmployeeDataManager;
 
 import java.util.Objects;
@@ -19,7 +20,9 @@ public class HelloController {
     public void LoginClicked(ActionEvent mouseEvent) throws Exception {
         if (textField.getText().equals("") && passwordField.getText().equals("")) {
             EmployeeDataManager fManager = new EmployeeDataManager();
+            DepartmentDataManager dManager = new DepartmentDataManager();
             EmployeeDataManager.list = fManager.ReadFile("Employees.ser");
+            DepartmentDataManager.list = dManager.ReadFile("Departments.ser");
             Stage window = (Stage) (mainBorderPane.getScene().getWindow());
             window.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("Dashboard.fxml")))));
         }

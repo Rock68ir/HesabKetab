@@ -13,7 +13,8 @@ public class FixedCommissionSalarySubmitController extends SubmitSalaryBaseContr
     public MFXTextField BaseTextField;
 
     public void NextSubmitBtnClicked(ActionEvent actionEvent) throws Exception {
-        FixedCommissionSalary newFixedCommissionSalary = new FixedCommissionSalary(LocalDate.now() , LocalDate.now().minusMonths(1), 0 , STATUS.ACTIVE , (short) 4,Integer.parseInt(BaseTextField.getText()) ,Integer.parseInt(SoldAmountTextField.getText()), Integer.parseInt(PercentageTextField.getText()) );
+        super.NextSubmitBtnClicked(actionEvent);
+        FixedCommissionSalary newFixedCommissionSalary = new FixedCommissionSalary(StartContractDateField.getValue(), LocalDate.now().plusMonths(Integer.parseInt(ContractPeriodField.getText())), managerBase , STATUS.ACTIVE , (short) 4,Integer.parseInt(BaseTextField.getText()) ,Integer.parseInt(SoldAmountTextField.getText()), Integer.parseInt(PercentageTextField.getText()) );
         SubmitInFile(newFixedCommissionSalary);
     }
 }

@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.hesabketab.Salaries.Salary;
 import org.example.hesabketab.Status.GENDER;
+import org.example.hesabketab.Status.STATUS;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,31 +27,29 @@ public class UserPopupPageController {
     public MFXPaginatedTableView<Salary> paginatedSalary;
     public MFXButton LoadUserBtn;
     public MFXFontIcon UserPopupCloseBtn;
-    private double xOffset = 0;
-    private double yOffset = 0;
-
-    public void initialize(){
-        UserPopupVbox.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
-        UserPopupVbox.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                UserPopupVbox.getScene().getWindow().setX(event.getScreenX() - xOffset);
-                UserPopupVbox.getScene().getWindow().setY(event.getScreenY() - yOffset);
-            }
-        });
-    }
-    void initData(String firstName, String lastName, String codeID, LocalDate birthDate , GENDER gender , ArrayList<Salary> salaries) {
+//    public void initialize(){
+//        UserPopupVbox.setOnMousePressed(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent event) {
+//                xOffset = event.getSceneX();
+//                yOffset = event.getSceneY();
+//            }
+//        });
+//        UserPopupVbox.setOnMouseDragged(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent event) {
+//                UserPopupVbox.getScene().getWindow().setX(event.getScreenX() - xOffset);
+//                UserPopupVbox.getScene().getWindow().setY(event.getScreenY() - yOffset);
+//            }
+//        });
+//    }
+    void initData(String firstName, String lastName, String codeID, LocalDate birthDate , GENDER gender , ArrayList<Salary> salaries , STATUS status) {
         employeeFirstField.setText("Firstname : " + firstName);
         employeeLastField.setText("Lastname : " + lastName);
         employeeNationalIDField.setText("NationalID : " + codeID);
         employeeDateField.setText("Birthday : " + birthDate.toString());
         GenderComboBox.setText("Gender : " + gender);
+        employeeStateField.setText("Current Status : " + status);
     }
     public void LoadUserBtnClicked(ActionEvent actionEvent) {
     }

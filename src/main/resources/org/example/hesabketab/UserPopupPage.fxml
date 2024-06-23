@@ -77,7 +77,7 @@
       <children>
          <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="365.0">
             <children>
-               <Label fx:id="employeeNationalIDField" text="NationaID :  ">
+               <Label fx:id="employeeNationalIDField" text="NationalID :  ">
                   <font>
                      <Font name="Arial" size="14.0" />
                   </font>
@@ -122,6 +122,9 @@
             </children>
          </HBox>
       </children>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
    </HBox>
    <MFXPaginatedTableView fx:id="paginatedSalary" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" VBox.vgrow="ALWAYS" />
    <MFXButton fx:id="LoadUserBtn" alignment="CENTER" buttonType="RAISED" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#LoadUserBtnClicked" prefHeight="43.0" prefWidth="202.0" rippleAnimateShadow="true" rippleColor="#3d52a0" style="-fx-background-radius: 10; -fx-background-color: #141619; -fx-text-fill: fff;" text="Load User" textAlignment="CENTER">
