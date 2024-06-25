@@ -44,7 +44,7 @@ public class SubmitDepartmentController {
         }
         System.out.println("kk");
         DepartmentDataManager dManager = new DepartmentDataManager();
-        dManager.UpdateFile(EmployeeDataManager.list , "Departments.ser");
+        dManager.UpdateFile(DepartmentDataManager.list , "Departments.ser");
         ((BorderPane)NextSubmitBtn.getParent().getParent().getParent()).setCenter(null);
     }
 }
