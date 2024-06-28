@@ -1,5 +1,7 @@
 package Validition;
 
+import java.time.LocalDate;
+
 public class Validators{
     public static boolean ValidatorLetters(String s){
         boolean result = true;
@@ -59,5 +61,8 @@ public class Validators{
         else {
             return (11 - (sum % 11)) == controlCode;
         }
+    }
+    public static boolean ValidatorCodeDate(LocalDate birthday , LocalDate date){
+        return birthday.isAfter(date);
     }
 }
